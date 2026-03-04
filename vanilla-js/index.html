@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technical Proof - Vanilla JS</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="background">
+      <div class="card">
+        <h1 class="title">This is a technical proof</h1>
+        <p class="description">
+          Lorem ipsum dolor sit amet consectetur adipiscing, elit mus primis nec
+          inceptos. Lacinia habitasse arcu molestie maecenas cursus quam nunc,
+          hendrerit posuere augue fames dictumst placerat porttitor, dis mi
+          pharetra vestibulum venenatis phasellus.
+        </p>
+        <div class="item-list" id="itemList">
+        </div>
+        <div class="actions">
+          <button class="button-outline undo-button" id="undoBtn" disabled>
+            ↩
+          </button>
+          <button class="button-outline delete-button" id="deleteBtn" disabled>
+            DELETE
+          </button>
+          <button class="add-button" id="addBtn">ADD</button>
+        </div>
+      </div>
+      <div class="overlay" id="overlay">
+        <div class="dialog" id="dialog">
+          <h2 class="dialog-title">Add item to list</h2>
+          <input
+            class="dialog-input"
+            id="dialogInput"
+            type="text"
+            placeholder="Type the text here..."
+          />
+          <div class="dialog-actions">
+            <button class="add-button dialog-add-button" id="dialogAddBtn">
+              ADD
+            </button>
+            <button
+              class="button-outline dialog-cancel-button"
+              id="dialogCancelBtn"
+            >
+              CANCEL
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

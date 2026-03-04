@@ -1,0 +1,9 @@
+.container {
+  width: 100%;
+  min-height: 227px;
+  max-height: 300px;
+  overflow-y: auto;
+  background: #F7F7F7;
+  border: 1px solid #CCCCCC;
+  margin-bottom: 0;
+}
