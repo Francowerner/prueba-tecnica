@@ -7,23 +7,25 @@ const dialogInput = document.getElementById("dialogInput");
 const dialogAddBtn = document.getElementById("dialogAddBtn");
 const dialogCancelBtn = document.getElementById("dialogCancelBtn");
 
-function generateId() {
-  return crypto.randomUUID();
-}
-
 const state = {
   items: [],
   selectedIds: [],
   history: [],
 };
 
+function generateId() {
+  return crypto.randomUUID();
+}
+
 function render() {
   itemListEl.innerHTML = "";
 
   state.items.forEach((item) => {
-    const itemEl = document.createElement("div");
+    const itemEl = document.createElement("li");
     itemEl.classList.add("item");
     itemEl.textContent = item.text;
+    itemEl.setAttribute("role", "option");
+    itemEl.setAttribute("aria-selected", state.selectedIds.includes(item.id));
 
     if (state.selectedIds.includes(item.id)) {
       itemEl.classList.add("selected");
@@ -48,7 +50,6 @@ function addItem(text) {
   if (text.trim() === "") return;
 
   state.history.push([...state.items]);
-
   state.items.push({
     id: generateId(),
     text: text.trim(),
@@ -61,7 +62,6 @@ function removeSelected() {
   if (state.selectedIds.length === 0) return;
 
   state.history.push([...state.items]);
-
   state.items = state.items.filter(
     (item) => !state.selectedIds.includes(item.id),
   );
@@ -72,7 +72,6 @@ function removeSelected() {
 
 function removeItem(id) {
   state.history.push([...state.items]);
-
   state.items = state.items.filter((item) => item.id !== id);
   state.selectedIds = state.selectedIds.filter(
     (selectedId) => selectedId !== id,
@@ -105,13 +104,6 @@ function undo() {
 function openDialog() {
   dialogInput.value = "";
   overlay.classList.add("open");
-  setTimeout(() => dialogInput.focus(), 100);
-}
-
-function openDialog() {
-  dialogInput.value = "";
-  overlay.classList.add("open");
-
   setTimeout(() => dialogInput.focus(), 100);
 }
 

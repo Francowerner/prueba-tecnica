@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="background">
-      <div class="card">
+    <main class="background">
+      <section class="card">
         <h1 class="title">This is a technical proof</h1>
         <p class="description">
           Lorem ipsum dolor sit amet consectetur adipiscing, elit mus primis nec
@@ -20,10 +20,21 @@
           hendrerit posuere augue fames dictumst placerat porttitor, dis mi
           pharetra vestibulum venenatis phasellus.
         </p>
-        <div class="item-list" id="itemList">
-        </div>
+
+        <ul
+          class="item-list"
+          id="itemList"
+          role="listbox"
+          aria-label="Text items list"
+        ></ul>
+
         <div class="actions">
-          <button class="button-outline undo-button" id="undoBtn" disabled>
+          <button
+            class="button-outline undo-button"
+            id="undoBtn"
+            disabled
+            aria-label="Undo last action"
+          >
             ↩
           </button>
           <button class="button-outline delete-button" id="deleteBtn" disabled>
@@ -31,9 +42,16 @@
           </button>
           <button class="add-button" id="addBtn">ADD</button>
         </div>
-      </div>
-      <div class="overlay" id="overlay">
-        <div class="dialog" id="dialog">
+      </section>
+
+      <div class="overlay" id="overlay" role="presentation">
+        <div
+          class="dialog"
+          id="dialog"
+          role="dialog"
+          aria-label="Add item to list"
+          aria-modal="true"
+        >
           <h2 class="dialog-title">Add item to list</h2>
           <input
             class="dialog-input"
@@ -54,7 +72,8 @@
           </div>
         </div>
       </div>
-    </div>
+    </main>
+
     <script src="app.js"></script>
   </body>
 </html>

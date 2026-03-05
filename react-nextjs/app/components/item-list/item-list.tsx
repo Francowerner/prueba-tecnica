@@ -1,17 +1,25 @@
-"use client"
+"use client";
 
-import React from 'react'
-import styles from './item-list.module.css'
-import ListItem from '../list-item/list-item'
-import type { Item, ListAction } from '@/app/types'
+import React from "react";
+import styles from "./item-list.module.css";
+import ListItem from "../list-item/list-item";
+import type { Item, ListAction } from "@/app/types";
 
-function ItemList({ items, selectedIds, dispatch }: {
+function ItemList({
+  items,
+  selectedIds,
+  dispatch,
+}: {
   items: Item[];
   selectedIds: string[];
   dispatch: React.Dispatch<ListAction>;
 }) {
   return (
-    <div className={styles.container}>
+    <ul
+      className={styles.container}
+      role="listbox"
+      aria-label="Text items list"
+    >
       {items.map((item) => (
         <ListItem
           key={item.id}
@@ -20,8 +28,8 @@ function ItemList({ items, selectedIds, dispatch }: {
           dispatch={dispatch}
         />
       ))}
-    </div>
+    </ul>
   );
 }
 
-export default ItemList
+export default ItemList;

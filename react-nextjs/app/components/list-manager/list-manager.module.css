@@ -1,21 +1,17 @@
-/* ListManager.module.css */
-
-/* El fondo gradient que ocupa toda la pantalla */
 .background {
   width: 100vw;
   min-height: 100vh;
-  background: linear-gradient(135deg, #A1C4FD 0%, #C2E9FB 100%);
+  background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
-/* La card blanca central */
 .card {
   width: 900px;
-  background: #FFFFFF;
-  box-shadow: 0px 5px 12px #0000001F;
+  background: #ffffff;
+  box-shadow: 0px 5px 12px #0000001f;
   border-radius: 20px;
   padding: 50px;
   position: relative;
@@ -39,7 +35,6 @@
   margin: 0 0 35px 0;
 }
 
-/* Barra de botones inferior */
 .actions {
   display: flex;
   align-items: center;
@@ -47,14 +42,13 @@
   gap: 15px;
 }
 
-/* Botón base outline (undo y delete) */
 .buttonOutline {
   height: 49px;
-  background: #FFFFFF;
-  border: 1px solid #324BFF;
+  background: #ffffff;
+  border: 1px solid #324bff;
   border-radius: 50px;
-  color: #324BFF;
-  font-family: 'Montserrat', sans-serif;
+  color: #324bff;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: 500;
   text-transform: uppercase;
@@ -79,15 +73,14 @@
   width: 124px;
 }
 
-/* Botón ADD — filled, alineado a la derecha */
 .addButton {
   height: 49px;
   width: 138px;
-  background: #324BFF;
-  border: 1px solid #324BFF;
+  background: #324bff;
+  border: 1px solid #324bff;
   border-radius: 50px;
-  color: #FFFFFF;
-  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: 500;
   text-transform: uppercase;

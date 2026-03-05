@@ -4,7 +4,7 @@
   padding: 0 16px;
   display: flex;
   align-items: center;
-  background: #F7F7F7;
+  background: #f7f7f7;
   color: #333333;
   font-size: 16px;
   cursor: pointer;
@@ -13,12 +13,12 @@
 }
 
 .item:hover {
-  background: #EDEDFD;
+  background: #ededfd;
 }
 
 .selected {
-  background: #324BFF;
-  color: #FFFFFF;
+  background: #324bff;
+  color: #ffffff;
 }
 
 .selected:hover {
