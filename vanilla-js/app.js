@@ -121,7 +121,7 @@ dialogAddBtn.addEventListener("click", () => {
 });
 
 dialogCancelBtn.addEventListener("click", closeDialog);
-
+//
 dialogInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     addItem(dialogInput.value);
