@@ -119,7 +119,7 @@ dialogAddBtn.addEventListener("click", () => {
   addItem(dialogInput.value);
   closeDialog();
 });
-
+//
 dialogCancelBtn.addEventListener("click", closeDialog);
 
 dialogInput.addEventListener("keydown", (e) => {
